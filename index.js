@@ -1,4 +1,5 @@
 const inquirer = require ('inquirer');
+// const table = require ('console.table')
 const Department = require('./lib/Department')
 const start = () => {
     let department = new Department;
@@ -19,10 +20,15 @@ const start = () => {
         }
     ])
     .then((menu)=> {
-        if (menu === 'View All Departments') {
-            department.viewAll();
-        }
+        // if (menu === 'View All Departments') {
+            return department.viewAll();
+        // }
     })
+    .then ((rows)=>{
+        console.table(rows);
+    })
+    
+    
     
 }
 
