@@ -1,5 +1,7 @@
 const inquirer = require ('inquirer');
+const Department = require('./lib/Department')
 const start = () => {
+    let department = new Department;
     inquirer.prompt([
         {
             type: 'list',
@@ -16,6 +18,11 @@ const start = () => {
             ],
         }
     ])
+    .then((menu)=> {
+        if (menu === 'View All Departments') {
+            department.viewAll();
+        }
+    })
     
 }
 
