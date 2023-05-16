@@ -11,7 +11,7 @@ I developed an Employee Tracker application using node.js. With Inquirer I creat
 
 ## Walkthrough video
 
-![alt Walkthrough Video](https://drive.google.com/file/d/1EGC4WEZSGBaJjNC9FgTYkLMwtfM8dUHT/view)
+![Walkthrough Video](https://drive.google.com/file/d/1EGC4WEZSGBaJjNC9FgTYkLMwtfM8dUHT/view)
 
 ## Features and Technology
 
