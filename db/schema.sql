@@ -6,7 +6,7 @@ CREATE TABLE department(
 
 CREATE TABLE employee(
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    fist_name VARCHAR(40) NOT NULL,
+    first_name VARCHAR(40) NOT NULL,
     last_name VARCHAR(40) NOT NULL,
     role_id INTEGER,
     manager_id INTEGER

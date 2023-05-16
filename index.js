@@ -1,6 +1,7 @@
 const inquirer = require ('inquirer');
 // const table = require ('console.table')
 const {Department} = require('./lib/Department');
+const {Employee} = require('./lib/Employee');
 const {addEmployee} = require('./lib/questions/employee');
 
 const start = () => {
@@ -27,6 +28,9 @@ const start = () => {
                 return department.viewAll();
             case 'Add Employee':
                 addEmployee();
+            case 'View All Employees':
+                let employee = new Employee;
+                return employee.viewAll();
             default:
                 break;
         }
@@ -43,3 +47,5 @@ const start = () => {
 }
 
 start();
+
+
