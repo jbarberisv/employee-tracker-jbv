@@ -1,6 +1,8 @@
 const inquirer = require ('inquirer');
 // const table = require ('console.table')
-const Department = require('./lib/Department')
+const {Department} = require('./lib/Department');
+const {addEmployee} = require('./lib/questions/employee');
+
 const start = () => {
     let department = new Department;
     inquirer.prompt([
@@ -19,14 +21,22 @@ const start = () => {
             ],
         }
     ])
-    .then((menu)=> {
-        // if (menu === 'View All Departments') {
-            return department.viewAll();
-        // }
+    .then((option)=> {
+        switch (option.menu) {
+            case 'View All Departments':
+                return department.viewAll();
+            case 'Add Employee':
+                addEmployee();
+            default:
+                break;
+        }
     })
     .then ((rows)=>{
         console.table(rows);
     })
+    .catch((error) => {
+        console.error('An error occurred:', error);
+    });
     
     
     
